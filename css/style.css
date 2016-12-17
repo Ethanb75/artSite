@@ -1,0 +1,175 @@
+* {
+	transition: color .3s, border .3s;
+	/*font-family: 'Raleway', sans-serif;*/
+	/*font-family: 'Space Mono', monospace;*/
+}
+html,
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+}
+/* Scale canvas with resize attribute to full size */
+canvas[resize] {
+    width: 100%;
+    height: 100%;
+}
+.rightNav {
+	display: none;
+	position: absolute;
+	top: 45%;
+	right: 2%;
+	padding: 16px;
+	background: transparent;
+	color: whitesmoke;
+	border: 1px solid whitesmoke;
+}
+.customHeader {
+	width: 100%;
+	position: absolute;
+}
+.clickbait {
+	  -webkit-animation-name: thar; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: .5s; /* Safari 4.0 - 8.0 */
+    animation-name: thar;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+}
+.sendButton:hover {
+	color: #FFC53A;
+	border: 1px solid #FFC53A;
+}
+.sendButton {
+	cursor: pointer;
+}
+.contact {
+	width: 98%
+}
+.content2 {
+	border: 1px solid whitesmoke;
+	padding: 16px;
+	position: absolute;
+	top: 45%;
+	left: 45%;
+	width: 10%;
+	text-align: center;
+}
+.content3 {
+	border: 1px solid whitesmoke;
+	padding: 16px;
+	position: absolute;
+	top: 60%;
+	left:40%;
+	display: none;
+	width: 40%;
+}
+.content4 {
+	border: 1px solid whitesmoke;
+	padding: 16px;
+	position: absolute;
+	top: 25%;
+	left:10%;
+	display: none;
+	width: 40%;
+}
+.content5 {
+	border: 1px solid whitesmoke;
+	padding: 16px;
+	position: absolute;
+	top: 70%;
+	left:10%;
+	display: none;
+	width: 40%;
+}
+.content6 {
+	border: 1px solid whitesmoke;
+	padding: 16px;
+	position: absolute;
+	margin: 10% 10% 10% 10%;
+	display: none;
+}
+img.first {
+	position: absolute;
+	top: 20%;
+	left:5%;
+	width: 30%;
+	height: auto;
+	display: none;
+}
+img.second {
+	position: absolute;
+	top: 50%;
+	right:5%;
+	width: 30%;
+	height: auto;
+	display: none;
+}
+img.third {
+	position: absolute;
+	top: 5%;
+	right:10%;
+	width: 30%;
+	height: auto;
+	display: none;
+}
+img.ico {
+	float: right;
+	margin: 8px 8px;
+	cursor: pointer;
+	transition-timing-function: ease-in;
+}
+a {
+	color: whitesmoke;
+	text-decoration: none;
+}
+a:hover {
+	color: #FFC53A;
+}
+input {
+	border: 1px solid white;
+	color: whitesmoke;
+	background: transparent;
+}
+textarea {
+	background: transparent;
+	color: whitesmoke;
+	border: 1px solid white;
+	width: 100%;
+	min-height: 70px;
+}
+h3,label {
+	color: #FFC53A;
+}
+span {
+	color: whitesmoke;
+	cursor: pointer;
+}
+p {
+	color: whitesmoke;
+	text-align: justify;
+}
+span:hover {
+	color: #FFC53A;
+	cursor: pointer;
+}
+.afterPress {
+		border: 1px solid red;
+		color: red;
+		width: 50%;
+    height: 50%;
+    top: 10% !important;
+    left: 25% !important;
+		transition: height 1s, top 1s, width 1s, left 1s;
+}
+#welcome {
+	text-align: center;
+}
+@-webkit-keyframes thar {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@keyframes thar {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
