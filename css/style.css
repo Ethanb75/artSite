@@ -14,6 +14,29 @@ canvas[resize] {
     width: 100%;
     height: 100%;
 }
+#gallery {
+	display: none;
+	position: absolute;
+	top: 10%;
+	margin-left: 5%;
+	margin-right: 10%;
+	background: transparent;
+	color: whitesmoke;
+	border: 1px solid whitesmoke;
+	padding: 8px;
+}
+#gallery img {
+	width: 30%;
+	float: left;
+	margin: 8px;
+}
+.navTitle {
+	margin-top: 17px;
+	position: absolute;
+	left: 2%;
+	color: #FFC53A;
+	font-family: 'Lobster', cursive;
+}
 .rightNav {
 	display: none;
 	position: absolute;
@@ -43,46 +66,45 @@ canvas[resize] {
 .sendButton {
 	cursor: pointer;
 }
-.contact {
+#contact {
 	width: 98%
 }
-.content2 {
+#content2 {
 	border: 1px solid whitesmoke;
 	padding: 16px;
 	position: absolute;
 	top: 45%;
 	left: 45%;
-	width: 10%;
 	text-align: center;
 }
-.content3 {
+#about {
+	display: none;
 	border: 1px solid whitesmoke;
 	padding: 16px;
 	position: absolute;
 	top: 60%;
-	left:40%;
-	display: none;
-	width: 40%;
+	left: 55%;
+	width: 30%;
 }
-.content4 {
+#content4 {
 	border: 1px solid whitesmoke;
 	padding: 16px;
 	position: absolute;
 	top: 25%;
 	left:10%;
 	display: none;
-	width: 40%;
+	width: 30%;
 }
-.content5 {
+#content5 {
 	border: 1px solid whitesmoke;
 	padding: 16px;
 	position: absolute;
 	top: 70%;
 	left:10%;
 	display: none;
-	width: 40%;
+	width: 30%;
 }
-.content6 {
+#contactForm {
 	border: 1px solid whitesmoke;
 	padding: 16px;
 	position: absolute;
@@ -93,23 +115,23 @@ img.first {
 	position: absolute;
 	top: 20%;
 	left:5%;
-	width: 30%;
+	width: 40%;
 	height: auto;
 	display: none;
 }
 img.second {
 	position: absolute;
-	top: 50%;
-	right:5%;
-	width: 30%;
+	top: 38%;
+	right: 10%;
+	width: 40%;
 	height: auto;
 	display: none;
 }
 img.third {
 	position: absolute;
 	top: 5%;
-	right:10%;
-	width: 30%;
+	right:20%;
+	width: 40%;
 	height: auto;
 	display: none;
 }
@@ -130,6 +152,7 @@ input {
 	border: 1px solid white;
 	color: whitesmoke;
 	background: transparent;
+	padding: 4px;
 }
 textarea {
 	background: transparent;
@@ -141,6 +164,7 @@ textarea {
 h3,label {
 	color: #FFC53A;
 }
+
 span {
 	color: whitesmoke;
 	cursor: pointer;
@@ -164,6 +188,7 @@ span:hover {
 }
 #welcome {
 	text-align: center;
+	padding: 6px
 }
 @-webkit-keyframes thar {
     from {transform: rotate(0deg);}
@@ -172,4 +197,35 @@ span:hover {
 @keyframes thar {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
+}
+@media (max-width: 550px) {
+	div.rightNav {
+		visibility: hidden;
+	}
+}
+@media (max-width: 450px) {
+	div.rightNav {
+		visibility: hidden;
+	}
+	img.first,img.second,img.third {
+		top: 10%;
+		width: 80%;
+		margin-right: 10%;
+		right: 5%;
+	}
+	#about, #content4, #content5 {
+		padding: 8px;
+		bottom: 10%;
+		top: 60%;
+		right: 5%;
+		left: 10%;
+		width: 80%;
+		font-size: 10px;
+	}
+	#content2 {
+		left: 37%;
+	}
+	label {
+		float: left;
+	}
 }

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Space</title>
+    <title>Design Site</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lobster|Space+Mono" rel="stylesheet">
@@ -11,18 +11,20 @@
 </head>
 <body>
     <div class="customHeader">
-        <span style="margin-top: 17px;position: absolute;left: 2%; color: #FFC53A;font-family: 'Lobster', cursive;">Jamie Photos</span>
+        <span class="navTitle">Jamie Photos</span>
         <img class="ico" src="png/signs.png">
     </div>
     <div class="rightNav">
-        <p><a href="#">Gallery</a></p>
-        <p><a href="#">About</a></p>
-        <p><a href="#">Contact</a></p>
+        <p><a id="galleryBtn" href="#">Gallery</a></p>
+        <p><a id="aboutBtn" href="#">About</a></p>
+        <p><a id="contactBtn" href="#">Contact</a></p>
     </div>
-    <div class="content2">
+
+    <div id="content2" class="content">
         <span id="welcome">Welcome</span>
     </div>
-    <div class="content3">
+
+    <div id="about" class="content"> 
         <p>ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -30,42 +32,37 @@
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
         <span class="newContent">
-            Here
+            Next
         </span>
     </div>
-    <img class="first" src="img/cover.jpg">
-    <div class="content4">
+    <img class="first content" src="img/cover2.jpg">
+
+    <div id="content4">
         <p>ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. </p><br>
         <span class="moreContent">
-            Here
+            Next
         </span>
     </div>
-    <img class="second" src="img/cover.jpg">
-    <div class="content5">
+    <img class="second content" src="img/cover.jpg">
+
+    <div id="content5">
         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
         <span class="evenMoreContent">
-            Here
+            Next
         </span>
     </div>
-    <img class="third" src="img/cover.jpg">
+    <img class="third content" src="img/cover3.jpg">
 
-    <div class="content6">
-        
+    <div id="contactForm" class="content"> 
         <div class="contact">
             <h3>Contact Me</h3>
-            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor.</p>
+            <p style="float: left;">Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor.</p>
             <br>
-
-            <!-- <ul class="menu">
-                <li><a href="#">Dribbble</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Yo</a></li>
-            </ul> -->
         </div>
         <div class="contact">
             <div>
@@ -84,41 +81,75 @@
             <br>
             <input class="sendButton" value="Send Message" type="submit">
         </div>
+    </div>
 
+    <div id="gallery" class="content">
+        <img src="img/cover.jpg">
+        <img src="img/cover.jpg">
+        <img src="img/cover.jpg">
+        <img src="img/cover.jpg">
+        <img src="img/cover.jpg">
+        <img src="img/cover.jpg">
     </div>
     <canvas id="canvas" resize hidpi="off" style="background:black"></canvas>
 
 
     <!-- JQuery CDN -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+    <script type="text/javascript" src="js/lib/jquery-1.12.0.min.js"></script>
     <script type="text/javascript">
-        $(" div.content2 span").on("click", function() {
-               $("div.content2").slideUp(500);
-               $("div.content3").slideDown(500);
-               $("img.first").delay(400).fadeIn(1500);
+        //Regular content navigation below
+        $("#welcome").on("click", function() {
+            $( this ).parent().slideUp(500);
+            $("#about").slideDown(500);
+            $("img.first").delay(400).fadeIn(1500);
         });
-        $("span.newContent").on("click", function() {
-               $("img.first").fadeOut(1000);
-               $("div.content3").slideUp(500);
-               $("div.content4").delay(200).slideDown(500);
-               $("img.second").delay(400).fadeIn(1500);
+        $(".newContent").on("click", function() {
+            $( this ).parent().slideUp(500);
+            $("img.first").fadeOut(1000);
+            
+            $("#content4").delay(200).slideDown(500);
+            $("img.second").delay(400).fadeIn(1500);
         });
         $("span.moreContent").on("click", function() {
-               $("img.second").fadeOut(1000);
-               $("div.content4").slideUp(500);
-               $("div.content5").delay(200).slideDown(500);
-               $("img.third").delay(400).fadeIn(1500);
+            $( this ).parent().slideUp(500);
+            $("img.second").fadeOut(1000);
+            
+            $("#content5").delay(200).slideDown(500);
+            $("img.third").delay(400).fadeIn(1500);
         });
         $("span.evenMoreContent").on("click", function() {
-               $("img.third").fadeOut(1000)
-               $("div.content5").slideUp(500);
-               $("div.content6").slideDown(500);
-               //$("img.first").delay(400).fadeIn(1500);
+            $( this ).parent().slideUp(500);
+            $("img.third").fadeOut(1000)
+            
+            $("#contactForm").slideDown(500);
         });
-         $("img.ico").on("click", function(){
+
+        //below is the rightNav scripting
+        $("img.ico").on("click", function(){
             $( this ).toggleClass("clickbait");
             $(".rightNav").slideToggle();
-         });
+        });
+        $("#galleryBtn").on("click", function() {
+            $(".content").slideUp(500);
+            $("#gallery").delay(200).slideDown(500);
+        });
+        $("#aboutBtn").on("click", function() {
+            $(".content").slideUp(500);
+            $("#about").delay(200).slideDown(500);
+            $("img.first").delay(400).fadeIn(1500);
+        });
+        $("#contactBtn").on("click", function() {
+            $(".content").slideUp(500);
+            $("#contactForm").delay(200).slideDown(500);
+        });
+
+        //title script below
+        $(".navTitle").on("click", function() {
+            $(".content").slideUp(500);
+            $("#about").delay(200).slideDown(500);
+            $("img.first").delay(400).fadeIn(1500);
+        })
     </script>
 </body>
 </html>
